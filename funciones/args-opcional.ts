@@ -1,46 +1,13 @@
  (()=>{
 
-    const fullName = ( firstName: string, lastName: string ): string  => {
-
-        if( !firstName ){
-            throw new Error( 'FirstName is required');
-        }
-
-
-
-
-        return `${ firstName } ${ lastName}`
-
+  const fullName = ( firstName: string, lastName?: string ): string  => {
         
-        const name = fullName( 'Tony', 'Stark' );
+     return `${ firstName } ${ lastName || '---'}`;
 
+  }
+            
+    const name = fullName( 'Tony' );
 
-        console.log( {name} );
-
-
-
-
-
-
-
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    console.log({ name });
 
 })()
